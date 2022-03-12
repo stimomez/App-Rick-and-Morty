@@ -9,9 +9,11 @@ const ResidentInfo = ({residentUrl}) => {
     },[residentUrl])
     console.log(resident)
     return (
-        <div>
+        <div className='containerResidentInfo'>
+            <div className='card'>
             <h4>{resident.name}</h4>
              <img src={resident.image} alt="" />
+             </div>
         </div>
     );
 };

@@ -1,7 +1,52 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: #05292E;
+  
+}
 .App {
   text-align: center;
 }
 
+.coverPageOne{
+  width: 100%;
+  height: 250px;
+  
+  
+}
+.coverPageTwo{
+
+  position: absolute;
+  margin: 3%;
+  width: 30%;
+  left: 36%;
+
+  
+  opacity: 1;
+}
+.containerLocationInfo{
+  display: flex;
+  text-align: start;
+  flex-direction: row;
+  justify-content: center;
+  
+  width: 45%;
+  margin: 0 auto;
+  background: #062226;
+}
+.containerLocationInfo p{
+  margin: 0 40px;
+}
+.containerResidentInfo{
+ 
+  display: inline-block;
+  width: 25%;
+  margin: 0 10%;
+ 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

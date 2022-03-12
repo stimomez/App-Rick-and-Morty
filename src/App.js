@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import SearchBox from './components/SearchBox';
 import ResidentsList from './components/ResidentsList';
-
+import LocationInfo from './components/LocationInfo';
+import image3 from './pictures/image3.png'
+import image2 from './pictures/image2.png'
 function App() {
 
   const [ locations, setLocations ] = useState({})
@@ -14,14 +16,21 @@ function App() {
     axios.get(`https://rickandmortyapi.com/api/location/${random}`)
       .then(res => setLocations(res.data))
 },[])
+ 
 
 
   console.log(locations)
+  console.log(locations.residents?.length)
   return (
     <div className="App">
+      
+       <img className='coverPageOne' src={image3} alt="foto" />
+       <img className='coverPageTwo'src={image2} alt="" />
+      
+   
       <SearchBox setLocations={setLocations}/>
-     <h2>{locations.name}</h2>
-     <ResidentsList residents={ locations.residents }/>
+      <LocationInfo name={locations.name} type={locations.type} dimension={locations.dimension} numberResidents={locations.residents?.length}/>
+      <ResidentsList residents={ locations.residents }/>
     </div>
   );
 }
