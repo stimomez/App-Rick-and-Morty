@@ -9,10 +9,17 @@ const ResidentInfo = ({residentUrl}) => {
     },[residentUrl])
     console.log(resident)
     return (
-        <div className='containerResidentInfo'>
-            <div className='card'>
-            <h4>{resident.name}</h4>
+
+       
+       <div   >
+        
+            
              <img src={resident.image} alt="" />
+             <div className='card'>
+             <h4>{resident.name}</h4>
+             <p>Species <br /> <strong> {resident.species}</strong></p>
+             <p>Origin <br /> <strong> {resident.origin?.name}</strong></p>
+             <p>Episodes <br /> <strong> {resident.episode?.length}</strong></p>
              </div>
         </div>
     );

@@ -32,21 +32,45 @@ body{
   text-align: start;
   flex-direction: row;
   justify-content: center;
-  
-  width: 45%;
+  width: 90%;
   margin: 0 auto;
   background: #062226;
+  color: #ffffff;
+  border-radius: 10px;
 }
 .containerLocationInfo p{
   margin: 0 40px;
 }
 .containerResidentInfo{
  
-  display: inline-block;
-  width: 25%;
-  margin: 0 10%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
+  border: 5px solid transparent;
+  justify-content: center;
+  justify-items: center;
+  color: #b4afaf;
+  
  
 }
+.containerResidentInfo strong{
+  font-size: 15px;
+  color: #ffffff;
+  
+}
+.containerResidentInfo h4{
+  border-bottom: 2px solid #e6dddda4;
+  font-size: 20px;
+}
+.card{
+  text-align: start;
+  background: #062226;
+  padding: 6px;
+  margin-top: -1%;
+  width: 100%;
+  border-radius: 0 0 10px 10px ;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

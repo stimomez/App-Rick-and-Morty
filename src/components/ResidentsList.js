@@ -4,11 +4,11 @@ import ResidentInfo from './ResidentInfo';
 const ResidentsList = ({residents}) => {
     
     return (
-        <div>
+        <div className='containerResidentInfo'>
             
             {
               residents?.map(resident =>(
-                  <ResidentInfo residentUrl={resident} key={resident}/>
+                  <ResidentInfo residentUrl={resident}  key={resident}/>
                   
               )) 
             }
