@@ -12,6 +12,7 @@ const ResidentsList = ({residents}) => {
                   
               )) 
             }
+        
         </div>
     );
 };

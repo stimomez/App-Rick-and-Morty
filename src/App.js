@@ -7,6 +7,7 @@ import ResidentsList from './components/ResidentsList';
 import LocationInfo from './components/LocationInfo';
 import image3 from './pictures/image3.png'
 import image2 from './pictures/image2.png'
+import NoResidents from './components/NoResidents';
 function App() {
 
   const [ locations, setLocations ] = useState({})
@@ -18,9 +19,7 @@ function App() {
 },[])
  
 
-
-  console.log(locations)
-  console.log(locations.residents?.length)
+  
   return (
     <div className="App">
       
@@ -30,7 +29,14 @@ function App() {
    
       <SearchBox setLocations={setLocations}/>
       <LocationInfo name={locations.name} type={locations.type} dimension={locations.dimension} numberResidents={locations.residents?.length}/>
-      <ResidentsList residents={ locations.residents }/>
+      {locations.residents?.length === 0 ?(
+          <NoResidents/>
+           ) : (
+             <ResidentsList  residents={ locations.residents }/>
+          )
+     }
+     
+      
     </div>
   );
 }
