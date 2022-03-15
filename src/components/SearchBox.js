@@ -26,7 +26,7 @@ const SearchBox = ({ setLocations }) => {
                        
                    
                     ) : (
-                        e.target.value < 1 ? (
+                        e.target.value < 0 ? (
                          alert('Location does not exist')
                      ) : (
                         setSearch( e.target.value ) 
