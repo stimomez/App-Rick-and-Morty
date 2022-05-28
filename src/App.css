@@ -1,119 +1,121 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-body{
-  background: #05292E;
-  
+body {
+  background: #05292e;
 }
 .App {
   text-align: center;
 }
 
-.coverPageOne{
+.coverPageOne {
   width: 100%;
-  height: 210px;
-  
-  
+  height: 230px;
+  margin: 0 auto;
 }
-.coverPageTwo{
-
-  position: absolute;
-  margin:1% 3%;
-  width: 28%;
-  left: 36%;
-  
-  
-  opacity: 1;
+.coverPageOne img {
+  width: 100%;
+  object-fit: contain;
 }
-.searchBox{
+.coverPageTwo {
+  width: 17%;
+  height: 60px;
   position: relative;
-  bottom: 43px;
- 
-  
-
+  opacity: 83%;
+  bottom: 66.5px;
+  box-shadow: 0.3px 0.7px 0.9px 2px #fcf6f6;
 }
-.searchBox input{
+.telephone {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 55px;
+  display: none;
+}
+.telephone img {
+  object-fit: cover;
+}
+.telephone2 {
+  width: 70%;
+  position: absolute;
+  top: 7.5%;
+  left: 16%;
+  display: none;
+}
+.searchBox {
+  position: relative;
+  bottom: 38px;
+}
+.searchBox input {
   width: 40%;
   height: 2.5em;
   border-radius: 5px;
 }
-.searchBox button{
+.searchBox button {
   padding: 3px;
   margin: 4px;
   height: 2.5em;
   border-radius: 5px;
   cursor: pointer;
 }
-.containerLocationInfo{
- /* display: flex;
-  text-align: start;
-  flex-direction: row;
-  justify-content: center;
-  width: 90%;
+.container-location-info {
+  background: #062226;
   margin: 0 auto;
-  background: #062226;
-  color: #ffffff;
-  border-radius: 10px;*/
-
-  display: inline-flex;
-  background: #062226;
-  padding: 0.5% 11.4%;
-  gap: 19%;
-  justify-content: center;
-  color: #ffffff;
-  cursor: pointer;
-
+  width: 60%;
+  min-width: 220px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: -21px;
+  margin-bottom: 10px;
 }
-.containerLocationInfo p{
+.location-info {
+  font-size: 0.8rem;
   text-align: start;
-  font-size: 12px;
- 
 }
-.containerLocationInfo strong{
-  font-size: 16px; 
+.location-info strong {
+  font-size: 1.2rem;
+}
 
-}
-.containerResidentInfo{
- 
+.containerResidentInfo {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
   border: 5px solid transparent;
   justify-content: center;
   justify-items: center;
   color: #b4afaf;
- 
- 
+
+  padding: 0 20px;
+  margin: 0 auto;
 }
-.containerResidentInfo strong{
+.containerResidentInfo strong {
   font-size: 16px;
   color: #ffffff;
-  
 }
-.containerResidentInfo h4{
+.containerResidentInfo h4 {
   border-bottom: 2px solid #e6dddda4;
   font-size: 20px;
 }
-.card{
-  /*98*/
+.card {
   text-align: start;
   background: #062226;
   padding: 6px;
   margin-top: -1%;
   width: 100%;
-  border-radius: 0 0 10px 10px ;
-  max-width: 18.8em;
-  min-height: 12.7em;
+  border-radius: 0 0 10px 10px;
+
   justify-content: center;
   cursor: pointer;
-  
 }
-.status{
+.resident-image {
+  width: 100%;
+}
+.status {
   background: #062226;
   position: relative;
-  padding-left: 10px ;
+  padding-left: 10px;
   top: 45px;
   text-align: start;
   width: 110px;
@@ -121,36 +123,34 @@ body{
   font-size: 20px;
 }
 
-.status >  strong{
+.status > strong {
   position: relative;
   margin-left: -10px;
   bottom: 1px;
-  
 }
-.status-alive{
-  
+.status-alive {
   color: red;
 }
 
-.status-dead{
-  
+.status-dead {
   color: black;
 }
-.status-unknown{
- 
+.status-unknown {
   color: gray;
 }
-.no-Residents{
-  /*15*/
- 
-  width:  42.4%;
+.no-Residents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42.4%;
+  min-width: 200px;
+  min-height: 200px;
   margin: 0 auto;
   background: #ece3e3b7;
   padding: 10%;
   border-radius: 12px;
-  font-size: 45px;
+  font-size: 35px;
   text-transform: uppercase;
-
 }
 
 .App-logo {
@@ -163,6 +163,52 @@ body{
     animation: App-logo-spin infinite 20s linear;
   }
 }
+footer{
+  
+  width: 100%;
+ background: #062226;
+ margin-top: 40px;
+ padding: 90px 0;
+ width: 100%;
+ z-index: 1000;
+ margin-top: 100px;
+ box-sizing: content-box;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer-li {
+  list-style: none;
+  padding: 7px;
+  background: #50504f;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 50%;
+}
+.footer-li:hover {
+  background: #5f5f5d;
+}
+.footer-li:active {
+  background: #fff;
+}
+.text-footer {
+  color: #fff;
+  font-size: 120%;
+  padding-bottom: 20px;
+}
+.icon-footer {
+  color: #fff;
+  padding: 7px;
+  font-size: 130%;
+}
+.icon-footer:active {
+  color: black;
+}
+
+
 
 .App-header {
   background-color: #282c34;
@@ -185,5 +231,38 @@ body{
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 540px) {
+  .location-info {
+    font-size: 0.55rem;
+    text-align: start;
+  }
+  .location-info strong {
+    font-size: 0.8rem;
+  }
+  .no-Residents {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .coverPageOne {
+    display: none;
+  }
+  .telephone2 {
+    display: block;
+  }
+  .coverPageTwo {
+    display: none;
+  }
+  .telephone {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 216px) {
+  .telephone {
+    display: block;
+    width: 104%;
   }
 }
